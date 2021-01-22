@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+
+	<!-- My place order with payment information saving -->
+    <route url="/V1/carts/mine/payment-authorization" method="POST">
+        <service class="Tng\Paymetric\Api\WebApiPaymentInterface" method="webAuthorize"/>
+        <resources>
+            <resource ref="anonymous" />
+        </resources>
+    </route>
+
+	<route url="/V1/carts/mine/SCC" method="GET">
+	    <service class="Tng\Paymetric\Api\WebApiPaymentInterface" method="getCreditCardInfo"/>
+	    <resources>
+	        <resource ref="anonymous" />
+	    </resources>
+    </route>
+</routes>

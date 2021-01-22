@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!--
+/**
+* Tng_Paymetric default configuration
+*
+* @category    Tng
+* @package     Tng_Paymetric
+* @author      Daniel McClure
+* @copyright   Tng (http://tngworldwide.com)
+* @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+*/
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <payment>
+            <tng_paymetric>
+                <active>0</active>
+                <model>Tng\Paymetric\Model\Payment</model>
+                <payment_action>authorize</payment_action>
+                <title>Paymetric</title>
+                <password backend_model="Magento\Config\Model\Config\Backend\Encrypted" />
+                <cctypes>AE,VI,MC,DI</cctypes>
+                <allowspecific>0</allowspecific>
+            </tng_paymetric>
+        </payment>
+    </default>
+</config>

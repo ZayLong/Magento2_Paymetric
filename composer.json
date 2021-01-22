@@ -1,0 +1,17 @@
+{
+    "name": "tng/paymetric",
+    "description": "Paymetric integration for Magento 2",
+    "type": "magento2-module",
+    "version": "dev-master",
+    "license": [
+        "OSL-3.0"
+    ],
+    "extra": {
+        "map": [
+            [
+                "*",
+                "Tng/Paymetric"
+            ]
+        ]
+    }
+}
